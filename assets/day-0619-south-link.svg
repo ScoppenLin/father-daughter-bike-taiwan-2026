@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" role="img" aria-label="南迴山海道路">
+  <defs><linearGradient id="s" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#f0a96a"/><stop offset=".5" stop-color="#a5c6cf"/><stop offset="1" stop-color="#bc6b5d"/></linearGradient></defs>
+  <rect width="1200" height="520" fill="url(#s)"/><path d="M0 315c151-48 295-58 437-21 167 44 281 65 466 17 115-30 211-35 297-19v228H0z" fill="#286b7b"/>
+  <path d="M388 294c132-118 232-186 376-207 139-20 243-87 436-87v520H360z" fill="#214b3d"/>
+  <path d="M579 333c123-91 226-120 344-121 101-1 184-39 277-99v407H555z" fill="#386c56"/>
+  <path d="M0 448c132-46 276-50 425-21 168 33 278 87 490 47 126-24 205-74 285-119v165H0z" fill="#263b32"/>
+  <path d="M492 520c82-107 176-170 286-202 104-30 218-26 422-6" fill="none" stroke="#f7e8b5" stroke-width="12" opacity=".8"/>
+  <path d="M634 520c62-73 132-118 220-139" fill="none" stroke="#1a201c" stroke-width="6" opacity=".55"/>
+</svg>
