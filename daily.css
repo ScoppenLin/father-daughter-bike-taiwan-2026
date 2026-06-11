@@ -1,0 +1,69 @@
+.panel-hero--image {
+  position: relative;
+  min-height: 310px;
+  overflow: hidden;
+  background: var(--panel-color, var(--sage));
+}
+
+.panel-hero--image img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.panel-hero--image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(18, 32, 28, 0.82), rgba(18, 32, 28, 0.36) 52%, rgba(18, 32, 28, 0.05)),
+    linear-gradient(0deg, rgba(18, 32, 28, 0.76), transparent 48%);
+}
+
+.panel-hero--image > div {
+  position: relative;
+  z-index: 1;
+}
+
+.day-lodging {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 16px;
+  align-items: center;
+  margin-top: 22px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 18px;
+  background: #fffaf0;
+}
+
+.day-lodging span {
+  display: block;
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 900;
+}
+
+.day-lodging h4 {
+  margin: 4px 0 10px;
+  font-size: 1.15rem;
+  line-height: 1.25;
+}
+
+.day-lodging p {
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 0.94rem;
+}
+
+@media (max-width: 680px) {
+  .panel-hero--image {
+    min-height: 260px;
+  }
+
+  .day-lodging {
+    grid-template-columns: 1fr;
+  }
+}
