@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" role="img" aria-label="鹿港北港老街與廟宇">
+  <defs><linearGradient id="g" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#f6c86f"/><stop offset=".5" stop-color="#d9efe7"/><stop offset="1" stop-color="#315f52"/></linearGradient></defs>
+  <rect width="1200" height="520" fill="url(#g)"/><circle cx="135" cy="112" r="70" fill="#fff4cf" opacity=".9"/>
+  <path d="M0 365c160-48 308-36 441 6 171 54 307 58 505 3 100-28 181-33 254-24v170H0z" fill="#315f52" opacity=".28"/>
+  <path d="M108 338h226v120H108zM407 292h258v166H407zM760 330h274v128H760z" fill="#713f2d"/>
+  <path d="M82 338l139-92 139 92M380 292l156-112 156 112M730 330l167-88 167 88" fill="none" stroke="#2b201a" stroke-width="18" stroke-linejoin="round"/>
+  <path d="M486 292h100v166H486z" fill="#f4d59d"/><path d="M160 378h48v80h-48zM257 378h48v80h-48zM827 374h56v84h-56zM924 374h56v84h-56z" fill="#f4d59d"/>
+  <path d="M0 458h1200v62H0z" fill="#263b32"/><path d="M96 457c226-37 427-33 604 0 129 25 294 31 404 0" fill="none" stroke="#f8e8b2" stroke-width="10" opacity=".7"/>
+</svg>
