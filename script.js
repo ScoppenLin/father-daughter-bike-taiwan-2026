@@ -6,6 +6,7 @@ const days = [
     stay: "台南聖禾",
     meal: "含餐",
     rooms: ["1大床 1間", "2大床 2間"],
+    image: "assets/day-0617-west-towns.svg",
     color: "#315f52",
     routeUrl: "https://maps.app.goo.gl/YWX8DaenKffsS8dE6",
     lodgingUrl: "https://maps.app.goo.gl/Nyhnp6FSkpmi9YE49",
@@ -32,6 +33,7 @@ const days = [
     stay: "小迷鹿民宿",
     meal: "",
     rooms: ["1大床1小床 3間"],
+    image: "assets/day-0618-south-coast.svg",
     color: "#217c8d",
     routeUrl: "https://maps.app.goo.gl/ZXuZDXC5jr5xvkPH7",
     lodgingUrl: "https://maps.app.goo.gl/YPkPBAonCCxa1JLn9",
@@ -57,6 +59,7 @@ const days = [
     stay: "娜路彎會館",
     meal: "含餐",
     rooms: ["2大床 3間"],
+    image: "assets/day-0619-south-link.svg",
     color: "#bc6b5d",
     routeUrl: "",
     lodgingUrl: "https://maps.app.goo.gl/AjKWZvZ4QC8mbYag9",
@@ -82,6 +85,7 @@ const days = [
     stay: "花漾民宿",
     meal: "",
     rooms: ["2大床 3間"],
+    image: "assets/day-0620-east-valley.svg",
     color: "#6d7d47",
     routeUrl: "https://maps.app.goo.gl/XndWkZ5epF4W4gvT7",
     lodgingUrl: "https://maps.app.goo.gl/3tWsRiizb3DrdQ8b9",
@@ -107,6 +111,7 @@ const days = [
     stay: "古華花園",
     meal: "",
     rooms: ["2大床 1間", "2大床 2間"],
+    image: "assets/day-0621-yilan-coast.svg",
     color: "#586f86",
     routeUrl: "https://maps.app.goo.gl/Qq92SNGwmQgGxpJi6",
     lodgingUrl: "https://maps.app.goo.gl/46WkrHH9m7PUgxnZ8",
@@ -132,6 +137,7 @@ const days = [
     stay: "行程收尾",
     meal: "",
     rooms: [],
+    image: "assets/day-0622-hsinchu-coast.svg",
     color: "#a9793c",
     routeUrl: "https://maps.app.goo.gl/K8TzCJXMx7QhRJq6A",
     lodgingUrl: "",
@@ -151,13 +157,6 @@ const days = [
     note: "這一天的重點不是再證明什麼，而是一起把爸爸與女兒的畢業回憶完整收好。"
   }
 ];
-
-const lodgingSummary = {
-  note: "部分房型已有升等",
-  costLabel: "住宿總費用",
-  cost: "42,180",
-  costNote: "費用含司機住宿"
-};
 
 const storyParagraphs = [
   "這一次，我們不是單純要完成一趟騎車旅行。",
@@ -218,13 +217,40 @@ function renderDayPanel() {
     ? `<a class="icon-link" href="${day.lodgingUrl}" target="_blank" rel="noreferrer">${icon("bed")}住宿地圖</a>`
     : "";
   const roomSummary = day.rooms.length ? day.rooms.join("、") : "無住宿安排";
+  const roomItems = day.rooms.length
+    ? day.rooms.map((room) => `<li>${room}</li>`).join("")
+    : "<li>無住宿安排</li>";
   const mealChip = day.meal ? `<span class="chip">${day.meal}</span>` : "";
+  const lodgingBlock = day.lodgingUrl
+    ? `
+      <section class="day-lodging" aria-label="當日住宿">
+        <div>
+          <span>當晚住宿</span>
+          <h4>${day.stay}</h4>
+          <ul class="room-list">${roomItems}</ul>
+          <p>部分房型已有升等；住宿總費用 NT$ 42,180，費用含司機住宿。</p>
+        </div>
+        <a class="icon-link" href="${day.lodgingUrl}" target="_blank" rel="noreferrer">${icon("bed")}住宿地圖</a>
+      </section>
+    `
+    : `
+      <section class="day-lodging" aria-label="當日住宿">
+        <div>
+          <span>當晚住宿</span>
+          <h4>${day.stay}</h4>
+          <ul class="room-list">${roomItems}</ul>
+        </div>
+      </section>
+    `;
 
   panel.style.setProperty("--panel-color", day.color);
   panel.innerHTML = `
-    <div class="panel-hero">
-      <p>${day.date}</p>
-      <h3>${day.title}</h3>
+    <div class="panel-hero panel-hero--image">
+      <img src="${day.image}" alt="${day.title} 主圖" />
+      <div>
+        <p>${day.date}</p>
+        <h3>${day.title}</h3>
+      </div>
     </div>
     <div class="panel-body">
       <div class="panel-meta">
@@ -235,6 +261,7 @@ function renderDayPanel() {
       </div>
       <p>${day.focus}</p>
       <div class="panel-actions">${routeAction}${lodgingAction}</div>
+      ${lodgingBlock}
       <div class="route-facts">
         <div>
           <span>路段</span>
@@ -279,37 +306,6 @@ function renderDayPanel() {
   `;
 }
 
-function renderLodging() {
-  const summary = document.querySelector(".lodging-summary");
-  const grid = document.querySelector(".lodging-grid");
-  summary.innerHTML = `
-    <div>
-      <strong>${lodgingSummary.note}</strong>
-      <p>${lodgingSummary.costNote}</p>
-    </div>
-    <div class="lodging-cost">
-      <small>${lodgingSummary.costLabel}</small>
-      <span>NT$ ${lodgingSummary.cost}</span>
-    </div>
-  `;
-  grid.innerHTML = days.filter((day) => day.lodgingUrl).map((day) => `
-    <article class="lodging-card">
-      <div>
-        <time>${day.date}</time>
-        <h3>${day.stay}</h3>
-        <p>${day.title}</p>
-        <ul class="room-list">
-          ${day.rooms.map((room) => `<li>${room}</li>`).join("")}
-        </ul>
-        <div class="lodging-tags">
-          ${day.meal ? `<span>${day.meal}</span>` : ""}
-        </div>
-      </div>
-      <a class="icon-link" href="${day.lodgingUrl}" target="_blank" rel="noreferrer">${icon("map")}Google Maps</a>
-    </article>
-  `).join("");
-}
-
 function renderStory() {
   document.querySelector(".story-copy").innerHTML = storyParagraphs
     .map((paragraph, index) => `<p>${index === 4 ? `<strong>${paragraph}</strong>` : paragraph}</p>`)
@@ -338,7 +334,6 @@ function refreshIcons() {
 
 renderTabs();
 renderDayPanel();
-renderLodging();
 renderStory();
 setupCopy();
 refreshIcons();
