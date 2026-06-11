@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" role="img" aria-label="花東縱谷稻田與森林自行車道">
+  <defs><linearGradient id="v" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#cde7d8"/><stop offset=".55" stop-color="#f5df8f"/><stop offset="1" stop-color="#6d7d47"/></linearGradient></defs>
+  <rect width="1200" height="520" fill="url(#v)"/><path d="M0 278c126-72 216-104 352-92 129 12 234 69 363 48 145-24 265-119 485-103v389H0z" fill="#315f52" opacity=".88"/>
+  <path d="M0 342c141-32 251-34 408 4 157 38 279 48 450 6 125-31 227-39 342-18v186H0z" fill="#d9bf55"/>
+  <path d="M0 392h1200M0 433h1200M0 474h1200" stroke="#f4e6a5" stroke-width="5" opacity=".6"/>
+  <path d="M642 520c60-68 120-112 202-139 88-29 194-35 356-19" fill="none" stroke="#fff8d7" stroke-width="10" opacity=".85"/>
+  <path d="M840 188c-12 75-11 126 0 207M906 172c-20 85-21 153-2 239M975 170c-25 91-27 168-7 249" stroke="#203b2c" stroke-width="10" stroke-linecap="round"/>
+</svg>
