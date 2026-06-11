@@ -124,6 +124,16 @@ body {
   font-size: 0.94rem;
 }
 
+.day-lodging .lodging-meal {
+  display: inline-block;
+  margin: 0 0 8px;
+  border-radius: 999px;
+  padding: 4px 10px;
+  color: #12493f;
+  background: #ffdf75;
+  font-weight: 900;
+}
+
 .story-subtitle {
   margin: -4px 0 20px;
   color: var(--muted);
