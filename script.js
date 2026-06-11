@@ -212,20 +212,16 @@ function renderDayPanel() {
   const routeAction = day.routeUrl
     ? `<a class="button button--primary" href="${day.routeUrl}" target="_blank" rel="noreferrer">${icon("map")}開啟路線</a>`
     : `<span class="chip">路線視狀況安排</span>`;
-  const lodgingAction = day.lodgingUrl
-    ? `<a class="icon-link" href="${day.lodgingUrl}" target="_blank" rel="noreferrer">${icon("bed")}住宿地圖</a>`
-    : "";
-  const roomSummary = day.rooms.length ? day.rooms.join("、") : "無住宿安排";
   const roomItems = day.rooms.length
     ? day.rooms.map((room) => `<li>${room}</li>`).join("")
     : "<li>無住宿安排</li>";
-  const mealChip = day.meal ? `<span class="chip">${day.meal}</span>` : "";
   const lodgingBlock = day.lodgingUrl
     ? `
       <section class="day-lodging" aria-label="當日住宿">
         <div>
           <span>當晚住宿</span>
           <h4>${day.stay}</h4>
+          ${day.meal ? `<p class="lodging-meal">${day.meal}</p>` : ""}
           <ul class="room-list">${roomItems}</ul>
           <p>部分房型已有升等；住宿總費用 NT$ 42,180，費用含司機住宿。</p>
         </div>
@@ -253,14 +249,11 @@ function renderDayPanel() {
     </div>
     <div class="panel-body">
       <div class="panel-meta">
-        <span class="chip">住宿：${day.stay}</span>
-        ${mealChip}
         <span class="chip">安全優先</span>
         <span class="chip">依天氣與體力調整</span>
       </div>
       <p>${day.focus}</p>
-      <div class="panel-actions">${routeAction}${lodgingAction}</div>
-      ${lodgingBlock}
+      <div class="panel-actions">${routeAction}</div>
       <div class="route-facts">
         <div>
           <span>路段</span>
@@ -278,14 +271,12 @@ function renderDayPanel() {
       <p class="route-note">${day.routeInfo.confidence}</p>
       <div class="panel-grid">
         <div>
-          <h3>今日段落</h3>
+          <h3>今日簡編</h3>
           <ul class="timeline">
             ${day.stops.map((stop) => `<li>${stop}</li>`).join("")}
           </ul>
         </div>
         <aside class="info-box">
-          <h3>住宿房型</h3>
-          <p>${roomSummary}</p>
           <h3>給參加家庭的小提醒</h3>
           <p>${day.note}</p>
         </aside>
@@ -301,6 +292,7 @@ function renderDayPanel() {
           `).join("")}
         </div>
       </section>
+      ${lodgingBlock}
     </div>
   `;
 }
