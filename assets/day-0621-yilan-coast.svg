@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" role="img" aria-label="宜蘭壯圍沙丘與濱海自行車道">
+  <defs><linearGradient id="y" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#d7edf0"/><stop offset=".5" stop-color="#f2d692"/><stop offset="1" stop-color="#586f86"/></linearGradient></defs>
+  <rect width="1200" height="520" fill="url(#y)"/><circle cx="982" cy="110" r="62" fill="#fff3c8" opacity=".75"/>
+  <path d="M0 290c144-54 277-58 435-12 176 52 329 48 506-10 100-32 183-39 259-28v280H0z" fill="#367f8c"/>
+  <path d="M0 373c161-79 330-105 512-75 165 27 286 97 688 22v200H0z" fill="#d9c084"/>
+  <path d="M0 434c139-35 263-38 389-7 151 37 309 56 487 20 138-28 224-71 324-108v181H0z" fill="#6f845e" opacity=".82"/>
+  <path d="M80 447c165-32 300-26 444 4 175 36 342 36 596-26" fill="none" stroke="#fff9dd" stroke-width="9" opacity=".85"/>
+</svg>
