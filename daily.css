@@ -1,3 +1,69 @@
+:root {
+  --paper: #fffdf4;
+  --line: #d7e3d6;
+  --sage: #207d68;
+  --sage-dark: #12493f;
+  --sun: #ffca4f;
+  --sea: #1f9bb5;
+  --rose: #ef7d61;
+}
+
+body {
+  background:
+    linear-gradient(180deg, rgba(255, 248, 218, 0.75), rgba(239, 251, 250, 0.9) 42%, rgba(255, 253, 244, 1)),
+    var(--paper);
+}
+
+.band {
+  background: #ecfbf4;
+}
+
+.day-tab:nth-child(1) {
+  border-color: #2f7d68;
+}
+
+.day-tab:nth-child(2) {
+  border-color: #1f9bb5;
+}
+
+.day-tab:nth-child(3) {
+  border-color: #ef7d61;
+}
+
+.day-tab:nth-child(4) {
+  border-color: #83a949;
+}
+
+.day-tab:nth-child(5) {
+  border-color: #5d82d6;
+}
+
+.day-tab:nth-child(6) {
+  border-color: #d39b33;
+}
+
+.day-tab[aria-selected="true"] {
+  background: linear-gradient(135deg, #207d68, #20a5b8);
+  border-color: transparent;
+}
+
+.button--primary {
+  background: #ffca4f;
+}
+
+.chip {
+  background: #fff6dc;
+}
+
+.attraction-grid article,
+.day-lodging {
+  background: #fff6dc;
+}
+
+.route-facts div {
+  background: #effbfa;
+}
+
 .panel-hero--image {
   position: relative;
   min-height: 310px;
@@ -67,7 +133,14 @@
 
 @media (max-width: 680px) {
   body {
-    font-size: 18px;
+    font-size: 20px;
+  }
+
+  .intro,
+  .route-section,
+  .story-section {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   .section-heading p,
@@ -77,69 +150,95 @@
   .route-note,
   .attraction-grid p,
   .day-lodging p {
-    font-size: 1.06rem;
-    line-height: 1.82;
+    font-size: 1.15rem;
+    line-height: 1.9;
   }
 
   .section-heading h2,
   .story-sticky h2 {
-    font-size: 2.15rem;
+    font-size: 2.45rem;
+    line-height: 1.18;
   }
 
   .story-subtitle {
-    font-size: 1.18rem;
+    font-size: 1.35rem;
+    line-height: 1.5;
   }
 
   .day-tab {
-    min-height: 86px;
-    padding: 18px;
-    grid-template-columns: 24px 1fr;
+    min-height: 104px;
+    padding: 22px;
+    grid-template-columns: 30px 1fr;
+    border-width: 2px;
   }
 
   .day-tab svg {
-    width: 24px;
-    height: 24px;
+    width: 30px;
+    height: 30px;
   }
 
   .day-tab strong {
-    font-size: 1.28rem;
+    font-size: 1.55rem;
+    line-height: 1.1;
   }
 
   .day-tab small {
-    margin-top: 2px;
-    font-size: 1rem;
+    margin-top: 6px;
+    font-size: 1.18rem;
+    line-height: 1.35;
   }
 
   .panel-hero h3 {
-    font-size: 2rem;
+    font-size: 2.32rem;
+    line-height: 1.15;
   }
 
   .panel-hero p {
-    font-size: 1.2rem;
+    font-size: 1.38rem;
   }
 
   .chip,
   .route-facts span {
-    font-size: 0.98rem;
+    font-size: 1.08rem;
   }
 
   .route-facts strong,
   .timeline li,
   .info-box p,
   .room-list li {
-    font-size: 1.08rem;
+    font-size: 1.22rem;
+    line-height: 1.72;
   }
 
   .attraction-grid h4,
   .day-lodging h4 {
-    font-size: 1.22rem;
+    font-size: 1.42rem;
+    line-height: 1.35;
   }
 
   .panel-hero--image {
-    min-height: 260px;
+    min-height: 300px;
   }
 
   .day-lodging {
     grid-template-columns: 1fr;
+    padding: 22px;
+  }
+
+  .button,
+  .icon-link {
+    min-height: 52px;
+    padding: 13px 18px;
+    font-size: 1.08rem;
+  }
+
+  .panel-body {
+    padding: 24px;
+  }
+
+  .route-facts div,
+  .attraction-grid article,
+  .info-box {
+    padding: 20px;
   }
 }
