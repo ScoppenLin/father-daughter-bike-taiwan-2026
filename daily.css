@@ -58,6 +58,13 @@
   font-size: 0.94rem;
 }
 
+.story-subtitle {
+  margin: -4px 0 20px;
+  color: var(--muted);
+  font-size: 1.05rem;
+  font-weight: 800;
+}
+
 @media (max-width: 680px) {
   .panel-hero--image {
     min-height: 260px;
