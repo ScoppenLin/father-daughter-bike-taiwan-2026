@@ -175,7 +175,6 @@ const icons = {
   heart: "heart",
   map: "map-pinned",
   bed: "bed",
-  copy: "copy",
   calendar: "calendar-days"
 };
 
@@ -312,20 +311,6 @@ function renderStory() {
     .join("");
 }
 
-function setupCopy() {
-  const button = document.querySelector("#copyStory");
-  const status = document.querySelector(".copy-status");
-  button.addEventListener("click", async () => {
-    const text = `用自己的雙腳，認識台灣\n2026 爸爸與女兒的單車環台小旅行\n\n${storyParagraphs.join("\n\n")}`;
-    try {
-      await navigator.clipboard.writeText(text);
-      status.textContent = "已複製，可以貼到 LINE 或社群分享。";
-    } catch {
-      status.textContent = "瀏覽器不支援直接複製，請改用手動選取文字。";
-    }
-  });
-}
-
 function refreshIcons() {
   if (window.lucide) {
     window.lucide.createIcons();
@@ -335,5 +320,4 @@ function refreshIcons() {
 renderTabs();
 renderDayPanel();
 renderStory();
-setupCopy();
 refreshIcons();
