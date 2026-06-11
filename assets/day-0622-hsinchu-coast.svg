@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" role="img" aria-label="新竹海岸自行車道與濕地">
+  <defs><linearGradient id="h" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#f2c980"/><stop offset=".45" stop-color="#b8d7d6"/><stop offset="1" stop-color="#a9793c"/></linearGradient></defs>
+  <rect width="1200" height="520" fill="url(#h)"/><path d="M0 298c148-40 272-37 418 1 171 44 305 61 480 18 115-28 217-36 302-28v231H0z" fill="#2b7a89"/>
+  <path d="M0 384c128-61 276-84 445-49 157 33 274 88 437 55 144-29 222-81 318-102v232H0z" fill="#b89048"/>
+  <path d="M0 445c132-36 253-38 381-13 143 28 289 53 474 20 143-25 240-73 345-103v171H0z" fill="#466b4c"/>
+  <path d="M94 466c170-34 328-31 494 6 161 36 320 24 520-31" fill="none" stroke="#fff6d7" stroke-width="10" opacity=".83"/>
+  <path d="M169 356c38-39 80-39 124 0M260 331c32-31 67-31 105 0M1010 343c31-34 69-34 106 0" fill="none" stroke="#fff6d7" stroke-width="7" stroke-linecap="round"/>
+</svg>
