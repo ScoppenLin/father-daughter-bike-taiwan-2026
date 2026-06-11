@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" role="img" aria-label="南台灣海岸與恆春">
+  <defs><linearGradient id="sky" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#f7b56a"/><stop offset=".55" stop-color="#9ed0d3"/><stop offset="1" stop-color="#217c8d"/></linearGradient></defs>
+  <rect width="1200" height="520" fill="url(#sky)"/><circle cx="165" cy="145" r="82" fill="#ffe5a4" opacity=".9"/>
+  <path d="M0 310c127-31 250-28 370 8 150 45 294 55 458 10 135-37 252-44 372-20v212H0z" fill="#246f80"/>
+  <path d="M0 403c167-70 310-88 476-60 175 29 312 96 724 15v162H0z" fill="#f0c97a"/>
+  <path d="M720 365c91-64 166-98 270-117 86-16 156-48 210-91v363H707z" fill="#315f52"/>
+  <path d="M536 520c95-100 205-159 332-178 107-16 201-8 332-40v218z" fill="#343d35"/>
+  <path d="M801 520c76-71 166-113 277-130" fill="none" stroke="#fff8d7" stroke-width="8" opacity=".85"/>
+</svg>
