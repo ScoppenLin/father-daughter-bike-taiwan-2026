@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>2026 爸爸與女兒的單車環台小旅行</title>
+    <meta
+      name="description"
+      content="2026 爸爸與女兒的單車環台小旅行：台中、台南、恆春、台東、花蓮、宜蘭、桃園與新竹海岸的互動行程頁。"
+    />
+    <link rel="icon" href="assets/hero-cycling-taiwan.svg" />
+    <link rel="preload" href="assets/hero-cycling-taiwan.svg" as="image" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero" id="top">
+      <img class="hero__image" src="assets/hero-cycling-taiwan.svg" alt="爸爸與女兒在台灣海岸公路騎單車" />
+      <div class="hero__scrim"></div>
+      <nav class="topbar" aria-label="主要導覽">
+        <a class="brand" href="#top">SNS 父女單車環島</a>
+        <div class="navlinks">
+          <a href="#route">行程</a>
+          <a href="#lodging">住宿</a>
+          <a href="#story">文案</a>
+        </div>
+      </nav>
+      <section class="hero__content" aria-labelledby="page-title">
+        <p class="eyebrow">2026 小學畢業前的台灣記憶</p>
+        <h1 id="page-title">用自己的雙腳，認識台灣</h1>
+        <p class="hero__lead">
+          爸爸與女兒一起從台中出發，往南、轉東、再回到北部與西部海岸，用六天把地圖上的距離踩進心裡。
+        </p>
+        <div class="hero__actions">
+          <a class="button button--primary" href="#route" data-icon="route">查看互動行程</a>
+          <a class="button button--ghost" href="#story" data-icon="heart">閱讀出發理由</a>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <section class="intro band" aria-label="旅程摘要">
+        <div class="intro__grid">
+          <div>
+            <p class="section-kicker">Tour Overview</p>
+            <h2>大家一起出發，也一起完成。</h2>
+          </div>
+          <p>
+            這趟旅程不追求速度或名次，而是讓孩子在畢業前，用自己的力量看見台灣的城市、海岸、田野與山脈。
+            每一天都保留彈性，依天氣、體力與安全狀況調整節奏。
+          </p>
+        </div>
+        <div class="stats" aria-label="旅程重點">
+          <div><strong>6</strong><span>天行程</span></div>
+          <div><strong>12+</strong><span>重要城鎮</span></div>
+          <div><strong>3</strong><span>自行車道重點</span></div>
+          <div><strong>1</strong><span>共同完成的回憶</span></div>
+        </div>
+      </section>
+
+      <section class="route-section" id="route">
+        <div class="section-heading">
+          <p class="section-kicker">Interactive Route</p>
+          <h2>行程路線</h2>
+          <p>點選日期可以切換每日重點、路線連結與住宿資訊。</p>
+        </div>
+        <div class="route-layout">
+          <aside class="day-tabs" aria-label="選擇日期"></aside>
+          <article class="day-panel" aria-live="polite"></article>
+        </div>
+      </section>
+
+      <section class="lodging-section band" id="lodging">
+        <div class="section-heading">
+          <p class="section-kicker">Lodging</p>
+          <h2>住宿、房型與地圖連結</h2>
+          <p>出發前可直接開啟 Google Maps，再確認當日集合、入住、房型與交通銜接。</p>
+        </div>
+        <div class="lodging-summary"></div>
+        <div class="lodging-grid"></div>
+      </section>
+
+      <section class="story-section" id="story">
+        <div class="story-layout">
+          <div class="story-sticky">
+            <p class="section-kicker">Why We Ride</p>
+            <h2>這趟旅程，我們想留下的不是照片而已</h2>
+            <button class="button button--primary" id="copyStory" type="button" data-icon="copy">複製完整文案</button>
+            <p class="copy-status" role="status" aria-live="polite"></p>
+          </div>
+          <article class="story-copy"></article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <a href="#top">回到上方</a>
+      <span>2026 爸爸與女兒的單車環台小旅行</span>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
