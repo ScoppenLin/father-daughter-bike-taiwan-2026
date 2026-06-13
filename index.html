@@ -10,69 +10,63 @@
     />
     <link rel="icon" href="assets/hero-cycling-taiwan.svg" />
     <link rel="preload" href="assets/hero-cycling-taiwan-photo.jpg" as="image" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;700;800;900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="daily.css" />
   </head>
-  <body>
-    <header class="hero" id="top">
-      <img class="hero__image" src="assets/hero-cycling-taiwan-photo.jpg" alt="爸爸與女兒在台灣海岸公路騎單車" />
-      <div class="hero__scrim"></div>
-      <nav class="topbar" aria-label="主要導覽">
-        <a class="brand" href="#top">SNS 父女單車環島</a>
-        <div class="navlinks">
-          <a href="#story">文案</a>
-          <a href="#route">行程</a>
-        </div>
-      </nav>
-      <section class="hero__content" aria-labelledby="page-title">
-        <p class="eyebrow">2026 小學畢業前的台灣記憶</p>
-        <h1 id="page-title">用自己的雙腳，認識台灣</h1>
-        <p class="hero__lead">
-          爸爸與女兒一起從台中出發，往南、轉東、再回到北部與西部海岸，用六天把地圖上的距離踩進心裡。
-        </p>
-        <div class="hero__actions">
-          <a class="button button--primary" href="#route" data-icon="route">查看互動行程</a>
-          <a class="button button--ghost" href="#story" data-icon="heart">閱讀出發理由</a>
-        </div>
-      </section>
+  <body id="top">
+    <nav class="topbar" aria-label="主要導覽">
+      <a href="#top" class="logo">SNS 父女單車環島</a>
+      <ul>
+        <li><a href="#story">出發理由</a></li>
+        <li><a href="#overview">旅程特色</a></li>
+        <li><a href="#route">行程路線</a></li>
+      </ul>
+    </nav>
+
+    <header class="hero">
+      <h2>2026 小學畢業前的台灣記憶</h2>
+      <h1 id="page-title">用自己的雙腳，認識台灣</h1>
+      <p>爸爸與女兒一起從台中出發，往南、轉東、再回到北部與西部海岸，用六天把地圖上的距離踩進心裡。</p>
+      <div class="btn-group">
+        <a class="btn btn-primary" href="#route" data-icon="route">查看互動行程</a>
+        <a class="btn btn-secondary" href="#story" data-icon="heart">閱讀出發理由</a>
+      </div>
     </header>
 
     <main>
-      <section class="intro band" aria-label="旅程摘要">
-        <div class="intro__grid">
-          <div>
-            <p class="section-kicker">Tour Overview</p>
-            <h2>大家一起出發，也一起完成。</h2>
-          </div>
-          <p>
-            這趟旅程不追求速度或名次，而是讓孩子在畢業前，用自己的力量看見台灣的城市、海岸、田野與山脈。
-            每一天都保留彈性，依天氣、體力與安全狀況調整節奏。
-          </p>
-        </div>
-        <div class="stats" aria-label="旅程重點">
-          <div><strong>6</strong><span>天行程</span></div>
-          <div><strong>12+</strong><span>重要城鎮</span></div>
-          <div><strong>3</strong><span>自行車道重點</span></div>
-          <div><strong>1</strong><span>共同完成的回憶</span></div>
-        </div>
+      <section id="story" class="story">
+        <h2 class="section-title">Trip Story</h2>
+        <p class="section-subtitle">為什麼要出發？</p>
+        <article class="story-copy"></article>
       </section>
 
-      <section class="story-section" id="story">
-        <div class="story-layout">
-          <div class="story-sticky">
-            <p class="section-kicker">Trip Story</p>
-            <h2>用自己的雙腳，認識台灣</h2>
-            <p class="story-subtitle">2026 爸爸與女兒的單車環台小旅行</p>
+      <section id="overview" class="overview-section">
+        <h2 class="section-title">Tour Overview</h2>
+        <p class="section-subtitle">我們即將創造的里程碑</p>
+        <div class="overview-cards" aria-label="旅程重點">
+          <div class="card">
+            <h3>6</h3>
+            <p>天行程</p>
           </div>
-          <article class="story-copy"></article>
+          <div class="card">
+            <h3>12+</h3>
+            <p>重要城鎮</p>
+          </div>
+          <div class="card">
+            <h3>3</h3>
+            <p>自行車道重點</p>
+          </div>
+          <div class="card">
+            <h3>1</h3>
+            <p>共同完成的回憶</p>
+          </div>
         </div>
       </section>
 
       <section class="route-section" id="route">
         <div class="section-heading">
-          <p class="section-kicker">Interactive Route</p>
-          <h2>行程路線</h2>
-          <p>點選日期可以切換每日主圖、路線重點、住宿房型、距離與沿途景點。</p>
+          <h2 class="section-title">Interactive Route</h2>
+          <p class="section-subtitle">點選日期可以切換每日主圖、路線重點、住宿房型、距離與沿途景點。</p>
         </div>
         <div class="route-layout">
           <aside class="day-tabs" aria-label="選擇日期"></aside>
@@ -81,9 +75,8 @@
       </section>
     </main>
 
-    <footer class="footer">
-      <a href="#top">回到上方</a>
-      <span>2026 爸爸與女兒的單車環台小旅行</span>
+    <footer>
+      <p>2026 爸爸與女兒的單車環台小旅行 | <a href="#top">回到最上方</a></p>
     </footer>
 
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
